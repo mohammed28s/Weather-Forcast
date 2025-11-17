@@ -1,7 +1,7 @@
 package weather.com.DTO;
 
 
-import lombok.*;
+import lombok.Data;
 
 @Data
 public class WeatherResponse {

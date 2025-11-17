@@ -27,7 +27,8 @@ public class WeatherService {
                 + "&longitude=" + lon
                 + "&current=temperature_2m,wind_speed_10m";
 
-        Map<String, Object> json = restClient.get()
+        Map<String, Object> json;
+        json = restClient.get()
                 .uri(url)
                 .retrieve()
                 .body(Map.class);
