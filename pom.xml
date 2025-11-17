@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>weather</groupId>
-	<artifactId>com</artifactId>
+	<artifactId>Weather</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>com</name>
 	<description>weather forcasting</description>
