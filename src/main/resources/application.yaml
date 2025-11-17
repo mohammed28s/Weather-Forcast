@@ -1,11 +1,12 @@
 spring:
   application:
-    name: com
+    name: weather
 
 weather:
    api:
-     base-url: https://api.open-meteo.com/v1/
+     base-url: "https://api.open-meteo.com/v1/forecast"
+     current-fields: "temperature_2m,wind_speed_10m"
+
+#https://api.open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.1&current=temperature_2m,wind_speed_10m
 
 
-
-#     https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&current_weather=true

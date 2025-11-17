@@ -12,6 +12,6 @@ public class RestClientConfig {
 
     @Bean
     public RestClient restClient() {
-        return RestClient.builder().build();
+        return RestClient.create();
     }
 }
