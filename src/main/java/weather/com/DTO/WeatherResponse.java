@@ -1,20 +1,15 @@
 package weather.com.DTO;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
-public class WeatherResponse {
+public class WeatherResponse {   // This is the spring app response will be displayed
 
-
-        @JsonProperty("temperature")
         private Double temperature;
-
-        @JsonProperty("windspeed")
         private Double windspeed;
-
-        @JsonProperty("time")
         private String time;
+    }
 
-}
+

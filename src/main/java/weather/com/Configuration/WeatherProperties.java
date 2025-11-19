@@ -1,22 +1,21 @@
-package weather.com.Configuration;
-
-
-
-
-
-
-
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-@ConfigurationProperties(prefix = "weather")
-@Data
-public class WeatherProperties {
-
-    private String baseUrl;
-    private String currentFields;
-
-
-}
+//package weather.com.Configuration;
+//
+//
+//
+//
+//
+//
+//import lombok.Data;
+//import org.springframework.boot.context.properties.ConfigurationProperties;
+//import org.springframework.context.annotation.Configuration;
+//
+//@Configuration
+//@ConfigurationProperties(prefix = "weather")
+//@Data
+//public class WeatherProperties {
+//
+//    private String baseUrl;
+//    private String currentFields;
+//
+//
+//}

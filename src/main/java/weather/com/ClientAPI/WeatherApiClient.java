@@ -24,12 +24,20 @@ public class WeatherApiClient {
 
     public WeatherResponse getWeather(Double latitude, Double longitude) {
 
-        return restClient.get()
+        WeatherResponse weatherResponse = restClient.get()
                 .uri(baseURl + "forecast?latitude={lat}&longitude={lon}&current_weather=true",
                         latitude, longitude)
                 .retrieve()
                 .body(WeatherResponse.class);
-    }
 
+        WeatherResponse response = new WeatherResponse();
+        response.setTemperature(weatherResponse.getTemperature());
+        response.setWindspeed(weatherResponse.getWindspeed());
+        response.setTime(weatherResponse.getTime());
+
+
+        return response;
+
+    }
 
 }

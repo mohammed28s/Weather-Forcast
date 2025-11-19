@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import weather.com.ClientAPI.WeatherApiClient;
 import weather.com.DTO.WeatherResponse;
 
-import java.util.Map;
+
 
 @Service
 @RequiredArgsConstructor

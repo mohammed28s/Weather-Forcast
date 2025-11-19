@@ -15,8 +15,10 @@ import weather.com.DTO.WeatherResponse;
 import weather.com.Service.WeatherService;
 
 
+
 @RestController
 @RequestMapping("/api/weather")   // the main path to the weather APIs
+@RequiredArgsConstructor
 @Controller
 public class WeatherController {
 
@@ -24,7 +26,9 @@ public class WeatherController {
     private WeatherService weatherService;
 
 
-    @GetMapping("/getTemp")  // This is getting all the current Weather forecasting data
+
+
+    @GetMapping("/current")  // This is getting all the current Weather forecasting data
     public WeatherResponse getWeather(@RequestParam Double lat, @RequestParam Double lon){
         return weatherService.getCurrentWeather(lat, lon);
     }
