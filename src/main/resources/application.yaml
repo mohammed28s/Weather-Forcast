@@ -8,7 +8,4 @@ weather:
      current-fields: "temperature_2m,wind_speed_10m"
 
 
-# This is the full example for the full base url "API" with Query String or parameters
-#https://api.open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.1&current=temperature_2m,wind_speed_10m
-
 

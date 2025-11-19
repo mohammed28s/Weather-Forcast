@@ -19,7 +19,6 @@ import weather.com.Service.WeatherService;
 @RestController
 @RequestMapping("/api/weather")   // the main path to the weather APIs
 @RequiredArgsConstructor
-@Controller
 public class WeatherController {
 
     @Autowired

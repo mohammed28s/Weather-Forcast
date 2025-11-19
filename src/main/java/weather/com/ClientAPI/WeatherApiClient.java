@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
+import weather.com.DTO.WeatherApiResponse;
 import weather.com.DTO.WeatherResponse;
 
 @Component
@@ -24,16 +25,25 @@ public class WeatherApiClient {
 
     public WeatherResponse getWeather(Double latitude, Double longitude) {
 
-        WeatherResponse weatherResponse = restClient.get()
-                .uri(baseURl + "forecast?latitude={lat}&longitude={lon}&current_weather=true",
-                        latitude, longitude)
-                .retrieve()
-                .body(WeatherResponse.class);
+        System.out.println("BASE URL = " + baseURl);
 
+        String url = baseURl + "forcast?latitude=" + latitude +
+                               "&longitude=" + longitude +
+                               "&current_weather=true";
+
+        //Get API response as WeatherAPIResponse
+        WeatherApiResponse apiResponse = restClient.get()
+                .uri(url)
+                .retrieve()
+                .body(WeatherApiResponse.class);
+
+
+        // Map to your own response  DTO
         WeatherResponse response = new WeatherResponse();
-        response.setTemperature(weatherResponse.getTemperature());
-        response.setWindspeed(weatherResponse.getWindspeed());
-        response.setTime(weatherResponse.getTime());
+        response.setTemperature(apiResponse.getCurrentWeather().getTemperature());
+        response.setWindspeed(apiResponse.getCurrentWeather().getWindspeed());
+        response.setTime(apiResponse.getCurrentWeather().getTime());
+
 
 
         return response;
