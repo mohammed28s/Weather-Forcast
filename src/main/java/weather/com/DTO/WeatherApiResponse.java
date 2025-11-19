@@ -17,8 +17,19 @@ public class WeatherApiResponse {  // This is the weather API response "External
 
         private Double temperature;
 
+        private Double interval;
+
         @JsonProperty("windspeed")
-        private Double windspeed;
+        private Double wind_speed;
+
+        @JsonProperty("winddirection")
+        private Double wind_direction;
+
+        @JsonProperty("is_day")
+        private Integer IsdayOrNight;
+
+        @JsonProperty("weathercode")
+        private Integer weather_code;
 
         private String time;
     }

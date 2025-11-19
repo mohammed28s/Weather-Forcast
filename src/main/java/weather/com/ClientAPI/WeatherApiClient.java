@@ -25,7 +25,7 @@ public class WeatherApiClient {
 
     public WeatherResponse getWeather(Double latitude, Double longitude) {
 
-
+        // adding the Query String to the main baseURL
         String url = baseURl + "forecast?latitude=" + latitude +
                                "&longitude=" + longitude +
                                "&current_weather=true";
@@ -38,11 +38,17 @@ public class WeatherApiClient {
 
 
         // Map to your own response  DTO
-        WeatherResponse response = new WeatherResponse();
-        response.setTemperature(apiResponse.getCurrentWeather().getTemperature());
-        response.setWindspeed(apiResponse.getCurrentWeather().getWindspeed());
-        response.setTime(apiResponse.getCurrentWeather().getTime());
 
+        // Current_weather
+        WeatherResponse response = new WeatherResponse();
+
+        response.setTime(apiResponse.getCurrentWeather().getTime());
+        response.setInterval(apiResponse.getCurrentWeather().getInterval());
+        response.setTemperature(apiResponse.getCurrentWeather().getTemperature());
+        response.setWindspeed(apiResponse.getCurrentWeather().getWind_speed());
+        response.setWinddirection(apiResponse.getCurrentWeather().getWind_direction());
+        response.setIs_day(apiResponse.getCurrentWeather().getIsdayOrNight());
+        response.setWeathercode(apiResponse.getCurrentWeather().getWeather_code());
 
 
         return response;

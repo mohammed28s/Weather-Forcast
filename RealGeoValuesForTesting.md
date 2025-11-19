@@ -7,7 +7,6 @@ http://localhost:8080/api/weather/current?lat=25.2048&lon=55.2708
 
 
 
-
 Tokyo:
 
 http://localhost:8080/api/weather/current?lat=35.6895&lon=139.6917
