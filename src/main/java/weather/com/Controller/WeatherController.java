@@ -24,7 +24,7 @@ public class WeatherController {
     private WeatherService weatherService;
 
 
-    @GetMapping()  // This is getting all the current Weather forecasting data
+    @GetMapping("/getTemp")  // This is getting all the current Weather forecasting data
     public WeatherResponse getWeather(@RequestParam Double lat, @RequestParam Double lon){
         return weatherService.getCurrentWeather(lat, lon);
     }

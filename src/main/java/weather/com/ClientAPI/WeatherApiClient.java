@@ -18,7 +18,7 @@ public class WeatherApiClient {
     private RestClient restClient;
 
 
-    @Value("weather.api.base-url")    // This is client API or endpoint
+    @Value("${weather.api.base-url}")    // This is client API or endpoint
     private String baseURl;
 
 
