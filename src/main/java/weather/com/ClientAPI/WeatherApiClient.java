@@ -39,9 +39,14 @@ public class WeatherApiClient {
 
         // Map to your own response  DTO
 
-        // Current_weather
+
         WeatherResponse response = new WeatherResponse();
 
+        //Main weather JSON
+        response.setTimezone(apiResponse.getTimezone_main());
+        response.setElevation(apiResponse.getElevation_main());
+
+        // Current_weather
         response.setTime(apiResponse.getCurrentWeather().getTime());
         response.setInterval(apiResponse.getCurrentWeather().getInterval());
         response.setTemperature(apiResponse.getCurrentWeather().getTemperature());

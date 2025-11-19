@@ -7,6 +7,11 @@ import lombok.Data;
 @Data
 public class WeatherApiResponse {  // This is the weather API response "External API": https://api.open-meteo.com/v1/
 
+    @JsonProperty("timezone")
+    public String timezone_main;
+
+    @JsonProperty("elevation")
+    public Integer elevation_main;
 
     @JsonProperty("current_weather")
     private CurrentWeather currentWeather;
