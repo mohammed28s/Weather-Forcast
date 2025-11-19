@@ -25,7 +25,6 @@ public class WeatherApiClient {
 
     public WeatherResponse getWeather(Double latitude, Double longitude) {
 
-        System.out.println("BASE URL = " + baseURl);
 
         String url = baseURl + "forcast?latitude=" + latitude +
                                "&longitude=" + longitude +
