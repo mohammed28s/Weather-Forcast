@@ -29,8 +29,10 @@ public class WeatherController {
 
     Logger logger = LoggerFactory.getLogger(WeatherController.class);
 
+
     @GetMapping("/current")  // This is getting all the current Weather forecasting data
     public WeatherResponse getWeather(@RequestParam Double lat, @RequestParam Double lon) {
+
         logger.trace("The Temp information has been fetched successfully");
         logger.debug("The endpoint has been debug");
         logger.info("This API fetching the latest Temp on the specific Geo location");
@@ -39,18 +41,10 @@ public class WeatherController {
 
         if (lat == null || lon == null) {   // This is to check if the parameters are not empty
             throw new GlobalExceptionHandler.ResourceNotFoundException("Add the lat and lon parameters");
+
         }
-
-
-        try {
 
             return weatherService.getCurrentWeather(lat, lon);
 
-        } catch (Exception e)
-        {
-            throw new GlobalExceptionHandler.ResourceNotFoundException("Failed to fetch the weather info");
-        }
-
     }
-
 }
