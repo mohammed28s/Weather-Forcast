@@ -19,12 +19,12 @@ import weather.com.Service.WeatherService;
 
 
 @RestController
-@RequestMapping("/api/weather")   // the main path to the weather APIs
+@RequestMapping("/api/weather")   // The main path to the weather APIs
 @RequiredArgsConstructor
 public class WeatherController {
 
     @Autowired
-    private WeatherService weatherService;
+    private final WeatherService weatherService;
 
 
     Logger logger = LoggerFactory.getLogger(WeatherController.class);
