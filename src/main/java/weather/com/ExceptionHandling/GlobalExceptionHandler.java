@@ -4,8 +4,6 @@ package weather.ExceptionHandling;
 
 
 
-
-
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
@@ -16,6 +14,7 @@ import java.time.Instant;
  * Keeps controllers clean and returns consistent RFC 7807 JSON.
  */
 
+@ControllerAdvice
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
