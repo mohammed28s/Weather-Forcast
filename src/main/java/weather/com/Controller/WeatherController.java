@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import weather.ExceptionHandling.GlobalExceptionHandler;
 import weather.com.DTO.WeatherResponse;
+import weather.com.ExceptionHandlings.GlobalExceptionHandler;
 import weather.com.Service.WeatherService;
 
 
