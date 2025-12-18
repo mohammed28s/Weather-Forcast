@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "weather")
 @Data
-public class WeatherProperties {
+public class WeatherProperties {   // Weather parameters
 
     private String baseUrl;
     private String currentFields;
