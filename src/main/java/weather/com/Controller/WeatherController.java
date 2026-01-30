@@ -44,7 +44,7 @@ public class WeatherController {
 
         }
 
-            return weatherService.getCurrentWeather(lat, lon);
+            return weatherService.getCurrentWeather(lat, lon);   // This is will return the current weather tempurture 
 
     }
 }
