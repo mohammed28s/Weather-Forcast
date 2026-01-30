@@ -26,5 +26,4 @@ public class WeatherService {
         return weatherApiClient.getWeather(lat, lon);
     }
 
-
 }
